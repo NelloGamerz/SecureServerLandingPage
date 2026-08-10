@@ -24,17 +24,20 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://secureshare.app";
+const siteUrl = "https://vilsend.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SecureShare — Move files faster. Work together better.",
-    template: "%s — SecureShare",
+    default: "VilSend — Move files faster. Work together better.",
+    template: "%s — VilSend",
   },
   description:
-    "SecureShare helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+    "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+
+  // icons: { icon: "/logo.png", apple: "/logo.png" },
   keywords: [
+    "VilSend",
     "secure file sharing",
     "encrypted file transfer",
     "team file sharing",
@@ -50,10 +53,14 @@ export const metadata: Metadata = {
     "encrypted sharing",
     "fast file transfer",
     "workspace file sharing",
+    "VilSend file sharing",
+    "encrypted file sharing platform",
+    "send files securely",
+    "share files online",
   ],
-  authors: [{ name: "SecureShare" }],
-  creator: "SecureShare",
-  publisher: "SecureShare",
+  authors: [{ name: "VilSend" }],
+  creator: "VilSend",
+  publisher: "VilSend",
   robots: {
     index: true,
     follow: true,
@@ -72,16 +79,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "SecureShare",
-    title: "SecureShare — Move files faster. Work together better.",
+    siteName: "VilSend",
+    title: "VilSend — Move files faster. Work together better.",
     description:
-      "SecureShare helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+      "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SecureShare — Move files faster. Work together better.",
+    title: "VilSend — Move files faster. Work together better.",
     description:
-      "SecureShare helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+      "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
   },
   category: "technology",
 };
@@ -104,11 +111,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "SecureShare",
+              name: "VilSend",
               applicationCategory: "BusinessApplication",
               operatingSystem: "macOS, Windows, iOS, Android",
               description:
-                "SecureShare helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+                "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
               offers: {
                 "@type": "Offer",
                 price: "0",

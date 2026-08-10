@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal";
+import { StaggerGroup, StaggerItem } from "@/components/stagger";
 import { ArrowRightIcon } from "@/components/icons";
 
 const steps = [
@@ -16,9 +17,9 @@ export function HowItWorks() {
           <div className="eyebrow">How it works</div>
           <h2>From setup to first transfer, in four steps.</h2>
         </Reveal>
-        <Reveal className="steps">
+        <StaggerGroup className="steps">
           {steps.map((step, i) => (
-            <div key={step.num} className="step">
+            <StaggerItem key={step.num} className="step">
               <div className="step-num">{step.num}</div>
               <h3>{step.title}</h3>
               <p>{step.desc}</p>
@@ -27,9 +28,9 @@ export function HowItWorks() {
                   <ArrowRightIcon />
                 </div>
               )}
-            </div>
+            </StaggerItem>
           ))}
-        </Reveal>
+        </StaggerGroup>
       </div>
     </section>
   );

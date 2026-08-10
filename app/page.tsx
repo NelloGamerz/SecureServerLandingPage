@@ -14,9 +14,9 @@ import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "SecureShare — Move files faster. Work together better.",
+  title: "VilSend — Move files faster. Work together better.",
   description:
-    "SecureShare helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+    "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
   alternates: {
     canonical: "/",
   },

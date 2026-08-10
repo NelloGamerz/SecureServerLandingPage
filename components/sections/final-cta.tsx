@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
+import Link from "next/link";
+import { ScrollLink } from "../scrollLink";
 
 export function FinalCta() {
   return (
@@ -8,7 +10,7 @@ export function FinalCta() {
         <div className="final-cta">
           <h2>Ready to modernize the way your team shares files?</h2>
           <Button asChild variant="primary">
-            <a href="#waitlist">Join the Waitlist</a>
+            <ScrollLink href="/#waitlist">Join the Waitlist</ScrollLink>
           </Button>
         </div>
       </section>

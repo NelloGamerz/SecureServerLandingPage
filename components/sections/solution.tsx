@@ -9,9 +9,9 @@ const benefits = [
 ];
 
 const lanes = [
-  { left: <LaptopIcon />, right: <TabletIcon />, delay: "0s" },
-  { left: <MonitorIcon />, right: <PhoneIcon />, delay: "0.9s" },
-  { left: <TabletIcon />, right: <LaptopIcon />, delay: "1.7s" },
+  { left: <LaptopIcon />, right: <TabletIcon />, delays: ["0s", "0.6s", "1.2s"] },
+  { left: <MonitorIcon />, right: <PhoneIcon />, delays: ["0.3s", "0.9s", "1.5s"] },
+  { left: <TabletIcon />, right: <LaptopIcon />, delays: ["0.6s", "1.2s", "1.8s"] },
 ];
 
 export function Solution() {
@@ -35,11 +35,13 @@ export function Solution() {
         <Reveal className="lanes">
           {lanes.map((lane, i) => (
             <div key={i} className="lane" style={i === lanes.length - 1 ? { marginBottom: 0 } : undefined}>
-              <div className="device-icon">{lane.left}</div>
+              <div className="device-icon sending">{lane.left}</div>
               <div className="route-line">
-                <span className="packet" style={{ animationDelay: lane.delay }} />
+                {lane.delays.map((d, j) => (
+                  <span key={j} className="packet" style={{ animationDelay: d }} />
+                ))}
               </div>
-              <div className="device-icon">{lane.right}</div>
+              <div className="device-icon receiving">{lane.right}</div>
             </div>
           ))}
         </Reveal>

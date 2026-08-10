@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal";
+import { StaggerGroup, StaggerItem } from "@/components/stagger";
 
 const features = [
   {
@@ -90,15 +91,15 @@ export function Features() {
           <div className="eyebrow">Features</div>
           <h2>Everything a team needs to move files, nothing it doesn&apos;t.</h2>
         </Reveal>
-        <Reveal className="grid-4-feat">
+        <StaggerGroup className="grid-4-feat">
           {features.map((f) => (
-            <div key={f.title} className="feat-card">
+            <StaggerItem key={f.title} className="feat-card">
               <div className="feat-icon">{f.icon}</div>
               <h3>{f.title}</h3>
               <p>{f.desc}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </Reveal>
+        </StaggerGroup>
       </div>
     </section>
   );

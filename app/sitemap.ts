@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://secureshare.app";
+  const baseUrl = "https://vilsend.app";
   const lastModified = new Date();
 
   return [

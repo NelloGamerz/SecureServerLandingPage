@@ -2,6 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.85;
+  }
+}
+
+@keyframes stamp {
+  0% {
+    transform: scale(0.7) rotate(-12deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.04) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes travel {
+  0% {
+    left: -12px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    left: 50%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 8px);
+    opacity: 0;
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+    opacity: 0.85;
+  }
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes send {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.03);
+  }
+}
+
+@keyframes receive {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(4px) scale(1.03);
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -146,6 +229,7 @@
   .route-line .packet {
     @apply absolute h-2 w-2 rounded-full bg-brass;
     top: -4px;
+    left: -12px;
     box-shadow: 0 0 0 4px rgba(192, 138, 62, 0.2);
     animation: travel 2.6s ease-in-out infinite;
   }
@@ -223,6 +307,12 @@
   .lane .device-icon {
     @apply h-11 w-11;
   }
+  .lane .device-icon.sending {
+    animation: send 2.6s ease-in-out infinite;
+  }
+  .lane .device-icon.receiving {
+    animation: receive 2.6s ease-in-out infinite;
+  }
 
   /* Features */
   .grid-4-feat {
@@ -230,6 +320,14 @@
   }
   .feat-card {
     @apply relative overflow-hidden rounded-radius border border-white/[0.07] bg-gradient-to-b from-ink-card to-ink-soft p-6 px-5 transition-all duration-300 hover:-translate-y-1 hover:border-brass/40;
+  }
+  .feat-card::before {
+    content: "";
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: radial-gradient(circle at 50% 0%, rgba(192, 138, 62, 0.1), transparent 70%);
+  }
+  .feat-card:hover::before {
+    @apply opacity-100;
   }
   .feat-card::after {
     content: "";
@@ -393,6 +491,50 @@
   }
   .form-note {
     @apply mt-3.5 text-center text-[11.5px] text-ash-soft;
+  }
+  .submit-btn {
+    @apply mt-1 flex w-full items-center justify-center gap-2 rounded-[11px] bg-ink px-6 py-3.5 font-sans text-[14px] font-semibold text-paper transition-all hover:bg-ink-soft disabled:cursor-not-allowed;
+  }
+  .spinner {
+    @apply h-4 w-4 rounded-full border-2 border-paper/30 border-t-paper;
+    animation: spin 0.7s linear infinite;
+  }
+  .toast {
+    @apply fixed bottom-8 left-1/2 z-[100] flex items-center gap-3 rounded-[11px] border px-[22px] py-3.5 text-[14px] shadow-[0_20px_50px_rgba(0,0,0,0.5)];
+  }
+  .toast.success {
+    @apply border-brass/40 bg-ink text-paper;
+  }
+  .toast.error {
+    @apply border-danger/40 bg-ink text-paper;
+  }
+  .toast .toast-dot {
+    @apply h-2 w-2 rounded-full;
+  }
+  .toast.success .toast-dot {
+    @apply bg-brass-light;
+  }
+  .toast.error .toast-dot {
+    @apply bg-danger;
+  }
+  .transfer-progress {
+    @apply mt-1;
+  }
+  .progress-track {
+    @apply relative h-1.5 w-full overflow-hidden rounded-full bg-ink/[0.08];
+  }
+  .progress-fill {
+    @apply absolute left-0 top-0 h-full rounded-full bg-brass;
+    animation: progress 2.6s ease-in-out infinite;
+  }
+  .progress-label {
+    @apply mt-2 flex items-center justify-between font-mono text-[10px] text-ash-soft;
+  }
+  .device-icon.sending {
+    animation: send 2.6s ease-in-out infinite;
+  }
+  .device-icon.receiving {
+    animation: receive 2.6s ease-in-out infinite;
   }
 
   /* Final CTA */

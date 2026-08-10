@@ -8,23 +8,23 @@ import {
 
 const faqs = [
   {
-    q: "What is SecureShare?",
-    a: "SecureShare is a platform that lets businesses and teams share files directly between their devices, without routing through slow uploads or complex permission trees.",
+    q: "What is VilSend?",
+    a: "VilSend is a platform that lets businesses and teams share files directly between their devices, without routing through slow uploads or complex permission trees.",
   },
   {
-    q: "Is SecureShare secure?",
+    q: "Is VilSend secure?",
     a: "Every transfer is encrypted end to end, so files are unreadable to anyone but the sender and the intended recipient — including us.",
   },
   {
     q: "Does it work for remote teams?",
-    a: "Yes. SecureShare is built for teams spread across offices, homes, and time zones, with no dependency on being on the same network.",
+    a: "Yes. VilSend is built for teams spread across offices, homes, and time zones, with no dependency on being on the same network.",
   },
   {
     q: "Which platforms will be supported?",
     a: "macOS and Windows at launch, with mobile apps for iOS and Android following shortly after.",
   },
   {
-    q: "Who is SecureShare built for?",
+    q: "Who is VilSend built for?",
     a: "Any team that regularly moves large or sensitive files — from software teams to video editors, agencies, and IT departments.",
   },
 ];

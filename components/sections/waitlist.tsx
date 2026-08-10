@@ -15,7 +15,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckIcon } from "@/components/icons";
 
 type AccountType = "individual" | "organization";
 
@@ -61,6 +60,12 @@ export function Waitlist() {
   const role = watch("role");
   const teamSize = watch("teamSize");
 
+  const showToast = (error: boolean) => {
+    setToastError(error);
+    setToastOpen(true);
+    setTimeout(() => setToastOpen(false), 4000);
+  };
+
   const onSubmit = async (data: FormValues) => {
     const payload = {
       accountType,
@@ -74,28 +79,22 @@ export function Waitlist() {
     await new Promise((resolve) => setTimeout(resolve, 900));
 
     try {
-      const res = await fetch("http://localhost:8080/api/wishlist", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/wishlist`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
-        setToastError(true);
-        setToastOpen(true);
-        setTimeout(() => setToastOpen(false), 3600);
+        showToast(true);
         return;
       }
 
       reset();
       setAccountType("individual");
-      setToastError(false);
-      setToastOpen(true);
-      setTimeout(() => setToastOpen(false), 3600);
+      showToast(false);
     } catch {
-      setToastError(true);
-      setToastOpen(true);
-      setTimeout(() => setToastOpen(false), 3600);
+      showToast(true);
     }
   };
 
@@ -104,6 +103,7 @@ export function Waitlist() {
     if (mode === "individual") {
       setValue("company", "");
       setValue("teamSize", "");
+      setValue("role", "");
     }
   };
 
@@ -119,7 +119,7 @@ export function Waitlist() {
               Early access
             </div>
             <h2>Join the Early Access Program</h2>
-            <p>Be one of the first teams to experience SecureShare.</p>
+            <p>Be one of the first teams to experience VilSend.</p>
           </div>
 
           <div className="toggle" role="tablist" aria-label="Applying as">
@@ -217,18 +217,6 @@ export function Waitlist() {
                         <span className="err">{errors.teamSize.message}</span>
                       )}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              <AnimatePresence>
-                {isOrg && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
                     <div
                       className={`field full ${errors.role ? "invalid" : ""}`}
                     >
@@ -268,7 +256,6 @@ export function Waitlist() {
               className="submit-btn"
               disabled={isSubmitting}
               style={{
-                transform: isSubmitting ? undefined : undefined,
                 opacity: isSubmitting ? 0.9 : 1,
               }}
             >
@@ -289,20 +276,13 @@ export function Waitlist() {
       <AnimatePresence>
         {toastOpen && (
           <motion.div
-            className="toast"
+            className={`toast ${toastError ? "error" : "success"}`}
             initial={{ opacity: 0, y: 20, x: "-50%" }}
             animate={{ opacity: 1, y: 0, x: "-50%" }}
             exit={{ opacity: 0, y: 20, x: "-50%" }}
             transition={{ duration: 0.35, ease: [0.2, 1, 0.3, 1] }}
-            style={{
-              position: "fixed",
-              bottom: "28px",
-              left: "50%",
-              zIndex: 100,
-              ...(toastError ? { borderColor: "rgba(179,84,63,0.6)" } : {}),
-            }}
           >
-            <CheckIcon />
+            <span className="toast-dot" />
             <span>
               {toastError
                 ? "Something went wrong — please try again."

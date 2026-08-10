@@ -15,14 +15,14 @@ export function Comparison() {
     <section className="section" id="why">
       <div className="wrap">
         <Reveal className="section-head">
-          <div className="eyebrow">Why SecureShare</div>
+          <div className="eyebrow">Why VilSend</div>
           <h2>A clear upgrade from the tools you&apos;re using now.</h2>
         </Reveal>
         <Reveal className="compare">
           <div className="compare-row head">
             <div>Capability</div>
             <div>Traditional File Sharing</div>
-            <div>SecureShare</div>
+            <div>VilSend</div>
           </div>
           {rows.map((row) => (
             <div key={row} className="compare-row">

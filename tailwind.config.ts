@@ -57,12 +57,31 @@ const config: Config = {
         spin: {
           to: { transform: "rotate(360deg)" },
         },
+        progress: {
+          "0%": { width: "0%", opacity: "0.4" },
+          "15%": { opacity: "1" },
+          "85%": { width: "100%", opacity: "1" },
+          "100%": { width: "100%", opacity: "0" },
+        },
+        receive: {
+          "0%, 75%": { boxShadow: "0 0 0 0 rgba(192, 138, 62, 0)" },
+          "90%": { boxShadow: "0 0 0 8px rgba(192, 138, 62, 0.2)" },
+          "100%": { boxShadow: "0 0 0 0 rgba(192, 138, 62, 0)" },
+        },
+        send: {
+          "0%, 100%": { transform: "scale(1)" },
+          "5%": { transform: "scale(1.06)" },
+          "15%": { transform: "scale(1)" },
+        },
       },
       animation: {
         pulse: "pulse 2.4s infinite",
         stamp: "stamp 900ms cubic-bezier(.2,1.6,.4,1) 400ms both",
         travel: "travel 2.6s ease-in-out infinite",
         spin: "spin 0.7s linear infinite",
+        progress: "progress 2.6s ease-in-out infinite",
+        receive: "receive 2.6s ease-in-out infinite",
+        send: "send 2.6s ease-in-out infinite",
       },
     },
   },

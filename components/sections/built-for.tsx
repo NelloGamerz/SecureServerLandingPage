@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal";
+import { StaggerGroup, StaggerItem } from "@/components/stagger";
 
 const tags = [
   {
@@ -61,14 +62,14 @@ export function BuiltFor() {
           <div className="eyebrow">Built for</div>
           <h2>Teams that move a lot of files, quickly.</h2>
         </Reveal>
-        <Reveal className="grid-6">
+        <StaggerGroup className="grid-6">
           {tags.map((t) => (
-            <div key={t.label} className="tag-card">
+            <StaggerItem key={t.label} className="tag-card">
               {t.icon}
               <p>{t.label}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </Reveal>
+        </StaggerGroup>
       </div>
     </section>
   );

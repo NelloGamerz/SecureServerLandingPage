@@ -14,7 +14,8 @@ export function Hero() {
       <div className="wrap hero-grid">
         <div>
           <div className="badge">
-            <span className="dot" /> MANIFEST NO. SS—2026 · Now boarding early access
+            <span className="dot" /> MANIFEST NO. SS—2026 · Now boarding early
+            access
           </div>
           <h1 className="headline">
             Move files faster.
@@ -22,7 +23,8 @@ export function Hero() {
             Work together <em>better.</em>
           </h1>
           <p className="sub">
-            SecureShare helps teams securely transfer files across devices with a simple, reliable experience built for modern businesses.
+            VilSend helps teams securely transfer files across devices with a
+            simple, reliable experience built for modern businesses.
           </p>
           <div className="flex flex-wrap gap-3.5 mb-9">
             <Button asChild variant="primary">
@@ -58,19 +60,30 @@ export function Hero() {
           </div>
           <div className="route">
             <div className="device">
-              <div className="device-icon">
+              <div className="device-icon sending">
                 <LaptopIcon />
               </div>
               <div className="device-label">MACBOOK PRO</div>
             </div>
             <div className="route-line">
               <span className="packet" />
+              <span className="packet" style={{ animationDelay: "0.8s" }} />
+              <span className="packet" style={{ animationDelay: "1.6s" }} />
             </div>
             <div className="device">
-              <div className="device-icon">
+              <div className="device-icon receiving">
                 <TabletIcon />
               </div>
               <div className="device-label">IPAD AIR</div>
+            </div>
+          </div>
+          <div className="transfer-progress">
+            <div className="progress-track">
+              <div className="progress-fill" />
+            </div>
+            <div className="progress-label">
+              <span>Transferring…</span>
+              <span>2.4 GB</span>
             </div>
           </div>
           <div className="manifest-meta">

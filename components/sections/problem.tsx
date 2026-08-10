@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal";
+import { StaggerGroup, StaggerItem } from "@/components/stagger";
 
 const problems = [
   {
@@ -49,15 +50,15 @@ export function Problem() {
           <div className="eyebrow">The problem</div>
           <h2>Traditional file sharing wasn&apos;t built for modern teams.</h2>
         </Reveal>
-        <Reveal className="grid-4">
+        <StaggerGroup className="grid-4">
           {problems.map((p) => (
-            <div key={p.title} className="note-card">
+            <StaggerItem key={p.title} className="note-card">
               <div className="note-icon">{p.icon}</div>
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </Reveal>
+        </StaggerGroup>
       </div>
     </section>
   );
