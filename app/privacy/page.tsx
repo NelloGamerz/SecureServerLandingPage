@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { LegalLayout } from "@/components/legal-layout";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — SecureShare",
+  title: "Privacy Policy — VilSend",
   description:
-    "How SecureShare collects, uses, and protects your personal information and file data.",
+    "How VilSend collects, uses, and protects your personal information and file data.",
   alternates: {
     canonical: "/privacy",
   },
@@ -14,7 +14,7 @@ export default function PrivacyPage() {
   return (
     <LegalLayout title="Privacy Policy" lastUpdated="August 1, 2026">
       <p style={{ marginBottom: "24px" }}>
-        At SecureShare, we take your privacy seriously. This Privacy Policy explains how we
+        At VilSend, we take your privacy seriously. This Privacy Policy explains how we
         collect, use, store, and protect your information when you use our file sharing platform
         and related services.
       </p>
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
         3. File Data and Encryption
       </h2>
       <p style={{ marginBottom: "16px" }}>
-        All files transferred through SecureShare are encrypted end to end. We do not have access
+        All files transferred through VilSend are encrypted end to end. We do not have access
         to the contents of your files. File metadata, such as file names, sizes, and transfer
         timestamps, may be stored for the purpose of providing transfer history and service
         functionality.
@@ -102,7 +102,7 @@ export default function PrivacyPage() {
       </h2>
       <p style={{ marginBottom: "16px" }}>
         If you have questions about this Privacy Policy, please reach out to us at
-        privacy@secureshare.app.
+        privacy@VilSend.app.
       </p>
     </LegalLayout>
   );

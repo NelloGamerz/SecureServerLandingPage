@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { LegalLayout } from "@/components/legal-layout";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — SecureShare",
+  title: "Terms of Service — VilSend",
   description:
-    "The terms and conditions governing your use of SecureShare's file sharing platform and services.",
+    "The terms and conditions governing your use of VilSend's file sharing platform and services.",
   alternates: {
     canonical: "/terms",
   },
@@ -14,8 +14,8 @@ export default function TermsPage() {
   return (
     <LegalLayout title="Terms of Service" lastUpdated="August 1, 2026">
       <p style={{ marginBottom: "24px" }}>
-        Welcome to SecureShare. These Terms of Service govern your use of our file sharing platform
-        and related services. By accessing or using SecureShare, you agree to be bound by these
+        Welcome to VilSend. These Terms of Service govern your use of our file sharing platform
+        and related services. By accessing or using VilSend, you agree to be bound by these
         terms.
       </p>
 
@@ -23,7 +23,7 @@ export default function TermsPage() {
         1. Acceptance of Terms
       </h2>
       <p style={{ marginBottom: "16px" }}>
-        By creating an account or using any SecureShare service, you confirm that you have read,
+        By creating an account or using any VilSend service, you confirm that you have read,
         understood, and agree to these Terms of Service and our Privacy Policy. If you do not agree,
         you may not use our services.
       </p>
@@ -32,7 +32,7 @@ export default function TermsPage() {
         2. Eligibility
       </h2>
       <p style={{ marginBottom: "16px" }}>
-        You must be at least 16 years old to use SecureShare. By using our services, you represent
+        You must be at least 16 years old to use VilSend. By using our services, you represent
         and warrant that you meet this age requirement and have the legal capacity to enter into
         these terms.
       </p>
@@ -49,7 +49,7 @@ export default function TermsPage() {
       <h2 className="font-serif text-paper" style={{ fontSize: "20px", fontWeight: 500, marginTop: "36px", marginBottom: "12px" }}>
         4. Acceptable Use
       </h2>
-      <p style={{ marginBottom: "8px" }}>You agree not to use SecureShare to:</p>
+      <p style={{ marginBottom: "8px" }}>You agree not to use VilSend to:</p>
       <ul style={{ marginBottom: "16px", paddingLeft: "20px", listStyleType: "disc" }}>
         <li style={{ marginBottom: "8px" }}>Share, store, or transmit any unlawful, harmful, or infringing content</li>
         <li style={{ marginBottom: "8px" }}>Distribute malware, viruses, or any malicious code</li>
@@ -63,9 +63,9 @@ export default function TermsPage() {
         5. File Transfers and Content
       </h2>
       <p style={{ marginBottom: "16px" }}>
-        You retain all ownership rights to the content and files you transfer through SecureShare.
+        You retain all ownership rights to the content and files you transfer through VilSend.
         You are solely responsible for the content you share and for ensuring you have the rights to
-        do so. SecureShare provides the infrastructure for transfer but does not claim ownership of
+        do so. VilSend provides the infrastructure for transfer but does not claim ownership of
         your content.
       </p>
 
@@ -73,7 +73,7 @@ export default function TermsPage() {
         6. Privacy
       </h2>
       <p style={{ marginBottom: "16px" }}>
-        Our data practices are described in our Privacy Policy. By using SecureShare, you agree to
+        Our data practices are described in our Privacy Policy. By using VilSend, you agree to
         the collection and use of information as outlined in that policy.
       </p>
 
@@ -91,7 +91,7 @@ export default function TermsPage() {
         8. Intellectual Property
       </h2>
       <p style={{ marginBottom: "16px" }}>
-        SecureShare, its logo, design, software, and all associated intellectual property are owned
+        VilSend, its logo, design, software, and all associated intellectual property are owned
         by us. You may not use our trademarks or branding without prior written consent.
       </p>
 
@@ -99,7 +99,7 @@ export default function TermsPage() {
         9. Disclaimers
       </h2>
       <p style={{ marginBottom: "16px" }}>
-        SecureShare is provided &quot;as is&quot; and &quot;as available&quot; without warranties
+        VilSend is provided &quot;as is&quot; and &quot;as available&quot; without warranties
         of any kind, whether express or implied. We do not warrant that the service will be
         error-free, secure, or available at all times.
       </p>
@@ -108,7 +108,7 @@ export default function TermsPage() {
         10. Limitation of Liability
       </h2>
       <p style={{ marginBottom: "16px" }}>
-        To the fullest extent permitted by law, SecureShare shall not be liable for any indirect,
+        To the fullest extent permitted by law, VilSend shall not be liable for any indirect,
         incidental, special, consequential, or punitive damages arising from your use of or
         inability to use our services.
       </p>
@@ -118,7 +118,7 @@ export default function TermsPage() {
       </h2>
       <p style={{ marginBottom: "16px" }}>
         We may suspend or terminate your account at any time for violation of these terms. You may
-        stop using SecureShare at any time. Upon termination, all provisions that should reasonably
+        stop using VilSend at any time. Upon termination, all provisions that should reasonably
         survive termination shall remain in effect.
       </p>
 
@@ -127,7 +127,7 @@ export default function TermsPage() {
       </h2>
       <p style={{ marginBottom: "16px" }}>
         We may update these Terms of Service from time to time. We will post the updated terms on
-        this page and update the &quot;last updated&quot; date. Continued use of SecureShare after
+        this page and update the &quot;last updated&quot; date. Continued use of VilSend after
         changes constitutes acceptance of the new terms.
       </p>
 
@@ -136,7 +136,7 @@ export default function TermsPage() {
       </h2>
       <p style={{ marginBottom: "16px" }}>
         If you have questions about these Terms of Service, please contact us at
-        legal@secureshare.app.
+        legal@VilSend.app.
       </p>
     </LegalLayout>
   );
