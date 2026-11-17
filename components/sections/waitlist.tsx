@@ -168,12 +168,12 @@ export function Waitlist() {
               </div>
 
               <div className="col-span-full flex flex-col gap-1.5">
-                <Label htmlFor="email">Work email</Label>
+                <Label htmlFor="email">{<isO></isO>rg ? "Work email" : "Email"}</Label>
                 <Input
                   id="email"
                   type="email"
                   aria-invalid={!!errors.email}
-                  placeholder="you@company.com"
+                  placeholder={isOrg ? "you@company.com" : "you@email.com"}
                   autoComplete="email"
                   {...register("email")}
                 />
