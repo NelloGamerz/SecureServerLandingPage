@@ -16,7 +16,7 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-[42px] w-full items-center justify-between rounded-[9px] border border-paper-line bg-white px-[13px] py-[11px] font-sans text-[14px] text-ink outline-none transition-colors focus:border-brass data-[placeholder]:text-ash-soft/60",
+      "flex h-[42px] w-full items-center justify-between rounded-[9px] border border-white/10 bg-white/[0.04] px-[13px] py-[11px] font-sans text-[14px] text-paper outline-none transition-colors focus:border-cobalt-light data-[placeholder]:text-ash-soft/70 aria-[invalid=true]:border-danger",
       className
     )}
     {...props}
@@ -37,7 +37,7 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        "relative z-[200] max-h-60 min-w-[8rem] overflow-hidden rounded-[9px] border border-paper-line bg-white text-ink shadow-[0_20px_50px_rgba(0,0,0,0.25)]",
+        "relative z-[200] max-h-60 min-w-[8rem] overflow-hidden rounded-[9px] border border-white/10 bg-ink-card text-paper shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
         className
       )}
       position={position}
@@ -58,14 +58,14 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-pointer select-none items-center rounded-md py-2 pl-8 pr-2 font-sans text-[14px] text-ink outline-none focus:bg-paper-dim/40 data-[disabled]:opacity-50",
+      "relative flex w-full cursor-pointer select-none items-center rounded-md py-2 pl-8 pr-2 font-sans text-[14px] text-paper outline-none focus:bg-cobalt/20 data-[disabled]:opacity-50",
       className
     )}
     {...props}
   >
     <span className="absolute left-2 flex h-4 w-4 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <Check className="h-4 w-4 text-brass" />
+        <Check className="h-4 w-4 text-cobalt-light" />
       </SelectPrimitive.ItemIndicator>
     </span>
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>

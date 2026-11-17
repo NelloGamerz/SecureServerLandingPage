@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal";
+import { SectionHead } from "@/components/section-head";
 import {
   Accordion,
   AccordionItem,
@@ -44,20 +45,15 @@ export function Faq() {
   };
 
   return (
-    <section className="section" id="faq">
+    <section className="relative z-[1] py-[72px] md:py-[100px]" id="faq">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div className="wrap">
-        <Reveal className="section-head center">
-          <div className="eyebrow" style={{ justifyContent: "center" }}>
-            FAQ
-          </div>
-          <h2>Questions, answered.</h2>
-        </Reveal>
+        <SectionHead eyebrow="FAQ" title="Questions, answered." center />
         <Reveal>
-          <div className="faq mx-auto max-w-[760px]">
+          <div className="mx-auto max-w-[760px]">
             <Accordion type="single" collapsible>
               {faqs.map((item) => (
                 <AccordionItem key={item.q} value={item.q}>

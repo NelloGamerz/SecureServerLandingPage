@@ -1,4 +1,4 @@
-import { Reveal } from "@/components/reveal";
+import { SectionHead } from "@/components/section-head";
 import { StaggerGroup, StaggerItem } from "@/components/stagger";
 
 const features = [
@@ -85,18 +85,25 @@ const features = [
 
 export function Features() {
   return (
-    <section className="section" id="features">
+    <section className="relative z-[1] py-[72px] md:py-[100px]" id="features">
       <div className="wrap">
-        <Reveal className="section-head">
-          <div className="eyebrow">Features</div>
-          <h2>Everything a team needs to move files, nothing it doesn&apos;t.</h2>
-        </Reveal>
-        <StaggerGroup className="grid-4-feat">
+        <SectionHead
+          eyebrow="Features"
+          title="Everything a team needs to move files, nothing it doesn&apos;t."
+        />
+        <StaggerGroup className="grid grid-cols-2 gap-[18px] lg:grid-cols-4">
           {features.map((f) => (
-            <StaggerItem key={f.title} className="feat-card">
-              <div className="feat-icon">{f.icon}</div>
-              <h3>{f.title}</h3>
-              <p>{f.desc}</p>
+            <StaggerItem
+              key={f.title}
+              className="relative overflow-hidden rounded-radius border border-white/[0.07] bg-gradient-to-b from-ink-card to-ink-soft p-6 px-5 transition-all duration-300 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_50%_0%,rgba(21,88,201,0.22),transparent_70%)] before:opacity-0 before:transition-opacity before:duration-300 after:absolute after:-top-px after:right-3.5 after:h-3.5 after:w-3.5 after:rounded-full after:bg-ink after:shadow-[0_8px_0_-1px_var(--ink),16px_0_0_-1px_var(--ink)] after:content-[''] hover:-translate-y-1 hover:border-cobalt/40 hover:shadow-[0_24px_60px_rgba(21,88,201,0.14)] hover:before:opacity-100"
+            >
+              <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-[9px] bg-cobalt/[0.14] [&_svg]:h-[17px] [&_svg]:w-[17px] [&_svg]:text-cobalt-light">
+                {f.icon}
+              </div>
+              <h3 className="mb-1.5 font-serif text-[16.5px] font-normal text-paper">
+                {f.title}
+              </h3>
+              <p className="text-[13px] leading-[1.5] text-ash-soft">{f.desc}</p>
             </StaggerItem>
           ))}
         </StaggerGroup>

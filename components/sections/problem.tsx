@@ -1,4 +1,4 @@
-import { Reveal } from "@/components/reveal";
+import { SectionHead } from "@/components/section-head";
 import { StaggerGroup, StaggerItem } from "@/components/stagger";
 
 const problems = [
@@ -44,18 +44,25 @@ const problems = [
 
 export function Problem() {
   return (
-    <section className="section" id="problem">
+    <section className="relative z-[1] py-[72px] md:py-[100px]" id="problem">
       <div className="wrap">
-        <Reveal className="section-head">
-          <div className="eyebrow">The problem</div>
-          <h2>Traditional file sharing wasn&apos;t built for modern teams.</h2>
-        </Reveal>
-        <StaggerGroup className="grid-4">
+        <SectionHead
+          eyebrow="The problem"
+          title="Traditional file sharing wasn&apos;t built for modern teams."
+        />
+        <StaggerGroup className="grid grid-cols-2 gap-5 lg:grid-cols-4">
           {problems.map((p) => (
-            <StaggerItem key={p.title} className="note-card">
-              <div className="note-icon">{p.icon}</div>
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
+            <StaggerItem
+              key={p.title}
+              className="rounded-radius border border-white/[0.06] bg-ink-card p-[22px] transition-all duration-300 hover:-translate-y-[3px] hover:border-cobalt/35 hover:shadow-[0_24px_60px_rgba(21,88,201,0.14)]"
+            >
+              <div className="mb-4 flex h-[38px] w-[38px] items-center justify-center rounded-[9px] bg-danger/[0.14] [&_svg]:h-[18px] [&_svg]:w-[18px] [&_svg]:text-danger">
+                {p.icon}
+              </div>
+              <h3 className="mb-2 font-serif text-[18px] font-normal text-paper">
+                {p.title}
+              </h3>
+              <p className="text-sm leading-[1.55] text-ash-soft">{p.desc}</p>
             </StaggerItem>
           ))}
         </StaggerGroup>

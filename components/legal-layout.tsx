@@ -16,17 +16,19 @@ export function LegalLayout({
     <>
       <Nav />
       <main>
-        <section className="section" style={{ paddingTop: "60px", paddingBottom: "80px" }}>
-          <div className="wrap" style={{ maxWidth: "760px" }}>
+        <section className="relative z-[1] pb-20 pt-[60px]">
+          <div className="wrap max-w-[760px]">
             <Reveal>
-              <div className="eyebrow">Legal</div>
-              <h1 className="font-serif font-medium text-paper" style={{ fontSize: "clamp(32px,4vw,48px)", lineHeight: 1.1, marginBottom: "12px" }}>
+              <div className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] text-lime before:inline-block before:h-px before:w-3.5 before:bg-lime before:content-['']">
+                Legal
+              </div>
+              <h1 className="mb-3 font-serif text-[clamp(32px,4vw,48px)] font-normal leading-[1.1] text-paper">
                 {title}
               </h1>
-              <p className="font-mono text-xs text-ash-soft" style={{ marginBottom: "40px" }}>
+              <p className="mb-10 font-mono text-xs text-ash-soft">
                 Last updated: {lastUpdated}
               </p>
-              <div className="legal-content" style={{ color: "var(--ash)", lineHeight: 1.7, fontSize: "15px" }}>
+              <div className="text-[15px] leading-[1.7] text-ash">
                 {children}
               </div>
             </Reveal>
