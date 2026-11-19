@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { KineticHeadline } from "@/components/kinetic-headline";
+import { TiltGlobe } from "@/components/tilt-globe";
+import { ScrollLink } from "@/components/scrollLink";
 import {
   ShieldIcon,
   BoltIcon,
@@ -16,26 +17,39 @@ const packet =
 
 export function Hero() {
   return (
-    <section className="relative z-[1] overflow-hidden pt-24 pb-[60px]">
+    <section className="relative z-[1] flex min-h-[calc(100svh-76px)] items-center overflow-hidden py-16">
       <div className="orb animate-drift" aria-hidden />
       <div className="orb orb-lime animate-drift-slow" aria-hidden />
-      <div className="wrap grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-        <div>
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
+        <div className="aspect-square w-[min(140vw,170vh)] translate-y-[32%] opacity-50">
+          <TiltGlobe />
+        </div>
+      </div>
+      <div className="wrap pointer-events-none relative z-10 flex flex-col items-center text-center">
+        <div className="relative -mt-12">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[130%] w-[140%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-ink/55 blur-2xl"
+          />
           <div className="mb-7 inline-flex items-center gap-2 rounded-[30px] border border-cobalt/35 bg-cobalt/[0.06] px-3.5 py-[7px] pl-2.5 font-mono text-xs text-cobalt-light">
             <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-lime shadow-[0_0_0_4px_rgba(212,255,36,0.14)]" />{" "}
             MANIFEST NO. SS—2026 · Now boarding early access
           </div>
-          <KineticHeadline />
+          <h1 className="font-serif text-[clamp(40px,5vw,72px)] font-bold leading-[1.04] tracking-[-0.01em] text-cobalt-light">
+            Move files faster.
+            <br />
+            Work <em className="italic text-lime">better</em> together.
+          </h1>
           <p className="my-6 max-w-[480px] text-[18px] leading-[1.65] text-ash">
             VilSend helps teams securely transfer files across devices with a
             simple, reliable experience built for modern businesses.
           </p>
-          <div className="mb-9 flex flex-wrap gap-3.5">
+          <div className="pointer-events-auto mb-9 flex flex-wrap justify-center gap-3.5">
             <Button asChild variant="primary">
-              <a href="#waitlist">Join the Waitlist</a>
+              <ScrollLink href="/#waitlist">Join the Waitlist</ScrollLink>
             </Button>
             <Button asChild variant="ghost">
-              <a href="#how">Learn how it works</a>
+              <ScrollLink href="/#how">Learn how it works</ScrollLink>
             </Button>
           </div>
           <div className="flex flex-wrap gap-[22px] font-mono text-xs text-ash-soft">
@@ -54,7 +68,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto max-w-[440px] rounded-2xl border border-white/[0.08] bg-ink-card p-[30px] pb-[26px] text-paper shadow-[0_30px_70px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.07),0_0_70px_rgba(21,88,201,0.14)] before:absolute before:-left-[11px] before:top-1/2 before:h-[22px] before:w-[22px] before:-translate-y-1/2 before:rounded-full before:bg-ink before:content-[''] after:absolute after:-right-[11px] after:top-1/2 after:h-[22px] after:w-[22px] after:-translate-y-1/2 after:rounded-full after:bg-ink after:content-[''] lg:ml-auto lg:rotate-[-2.2deg]">
+        {/* <div className="relative mx-auto max-w-[440px] rounded-2xl border border-white/[0.08] bg-ink-card p-[30px] pb-[26px] text-paper shadow-[0_30px_70px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.07),0_0_70px_rgba(21,88,201,0.14)] before:absolute before:-left-[11px] before:top-1/2 before:h-[22px] before:w-[22px] before:-translate-y-1/2 before:rounded-full before:bg-ink before:content-[''] after:absolute after:-right-[11px] after:top-1/2 after:h-[22px] after:w-[22px] after:-translate-y-1/2 after:rounded-full after:bg-ink after:content-[''] lg:ml-auto ">
           <div className="mb-[18px] flex items-start justify-between">
             <div className="font-mono text-[11px] leading-[1.5] tracking-[0.08em] text-ash-soft">
               TRANSFER · SS-00142
@@ -103,7 +117,7 @@ export function Hero() {
             </div>
             <div className="font-mono text-[11px] text-ash-soft">2.4 GB</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

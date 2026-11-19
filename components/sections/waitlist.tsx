@@ -168,7 +168,7 @@ export function Waitlist() {
               </div>
 
               <div className="col-span-full flex flex-col gap-1.5">
-                <Label htmlFor="email">{<isO></isO>rg ? "Work email" : "Email"}</Label>
+                <Label htmlFor="email">{isOrg ? "Work email" : "Email"}</Label>
                 <Input
                   id="email"
                   type="email"
