@@ -29,7 +29,7 @@ export function Hero() {
         <div className="relative -mt-12">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[130%] w-[140%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-ink/55 blur-2xl"
+            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[130%] w-[140%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-ink/55 blur-3xl"
           />
           <div className="mb-7 inline-flex items-center gap-2 rounded-[30px] border border-cobalt/35 bg-cobalt/[0.06] px-3.5 py-[7px] pl-2.5 font-mono text-xs text-cobalt-light">
             <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-lime shadow-[0_0_0_4px_rgba(212,255,36,0.14)]" />{" "}

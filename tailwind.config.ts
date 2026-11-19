@@ -24,7 +24,7 @@ const config: Config = {
           light: "#4D8BF0",
         },
         lime: "#D4FF24",
-        mist: "#7E95C9",
+        mist: "#caced7",
         ash: {
           DEFAULT: "#98A3B8",
           soft: "#69758C",
