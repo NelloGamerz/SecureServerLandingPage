@@ -351,7 +351,7 @@ export function TiltGlobe() {
                 data-trail={i}
                 fill="none"
                 stroke="#D4FF24"
-                strokeWidth="0.3"
+                strokeWidth="0.2"
                 strokeLinecap="round"
               />
             </g>

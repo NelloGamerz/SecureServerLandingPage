@@ -35,6 +35,20 @@ export function Hero() {
             <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-lime shadow-[0_0_0_4px_rgba(212,255,36,0.14)]" />{" "}
             MANIFEST NO. SS—2026 · Now boarding early access
           </div>
+          <div className="flex flex-wrap gap-[22px] font-mono text-xs text-ash-soft pb-4">
+            <span className="flex items-center gap-1.5">
+              <ShieldIcon className="h-[13px] w-[13px] text-mist" /> End-to-end
+              encrypted
+            </span>
+            <span className="flex items-center gap-1.5">
+              <BoltIcon className="h-[13px] w-[13px] text-mist" /> No file size
+              limits
+            </span>
+            <span className="flex items-center gap-1.5">
+              <UsersIcon className="h-[13px] w-[13px] text-mist" /> Built for
+              teams
+            </span>
+          </div>
           <h1 className="font-serif text-[clamp(40px,5vw,72px)] font-bold leading-[1.04] tracking-[-0.01em] text-cobalt-light">
             Move files faster.
             <br />
@@ -52,20 +66,7 @@ export function Hero() {
               <ScrollLink href="/#how">Learn how it works</ScrollLink>
             </Button>
           </div>
-          <div className="flex flex-wrap gap-[22px] font-mono text-xs text-ash-soft">
-            <span className="flex items-center gap-1.5">
-              <ShieldIcon className="h-[13px] w-[13px] text-mist" /> End-to-end
-              encrypted
-            </span>
-            <span className="flex items-center gap-1.5">
-              <BoltIcon className="h-[13px] w-[13px] text-mist" /> No file size
-              limits
-            </span>
-            <span className="flex items-center gap-1.5">
-              <UsersIcon className="h-[13px] w-[13px] text-mist" /> Built for
-              teams
-            </span>
-          </div>
+          
         </div>
 
         {/* <div className="relative mx-auto max-w-[440px] rounded-2xl border border-white/[0.08] bg-ink-card p-[30px] pb-[26px] text-paper shadow-[0_30px_70px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.07),0_0_70px_rgba(21,88,201,0.14)] before:absolute before:-left-[11px] before:top-1/2 before:h-[22px] before:w-[22px] before:-translate-y-1/2 before:rounded-full before:bg-ink before:content-[''] after:absolute after:-right-[11px] after:top-1/2 after:h-[22px] after:w-[22px] after:-translate-y-1/2 after:rounded-full after:bg-ink after:content-[''] lg:ml-auto ">
