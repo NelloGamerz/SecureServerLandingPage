@@ -27,13 +27,13 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-[22px] text-left font-serif text-[17px] font-medium text-paper transition-all hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink",
+        "flex flex-1 items-center justify-between py-[22px] text-left font-serif text-[18px] font-normal text-paper transition-all hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cobalt-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink",
         className
       )}
       {...props}
     >
       {children}
-      <Plus className="h-[18px] w-[18px] shrink-0 text-brass-light transition-transform duration-300 data-[state=open]:rotate-45" />
+      <Plus className="h-[18px] w-[18px] shrink-0 text-cobalt-light transition-transform duration-300 data-[state=open]:rotate-45" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));

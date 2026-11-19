@@ -1,4 +1,4 @@
-import { Reveal } from "@/components/reveal";
+import { SectionHead } from "@/components/section-head";
 import { StaggerGroup, StaggerItem } from "@/components/stagger";
 
 const tags = [
@@ -56,17 +56,17 @@ const tags = [
 
 export function BuiltFor() {
   return (
-    <section className="section">
+    <section className="relative z-[1] py-[72px] md:py-[100px]">
       <div className="wrap">
-        <Reveal className="section-head">
-          <div className="eyebrow">Built for</div>
-          <h2>Teams that move a lot of files, quickly.</h2>
-        </Reveal>
-        <StaggerGroup className="grid-6">
+        <SectionHead eyebrow="Built for" title="Teams that move a lot of files, quickly." />
+        <StaggerGroup className="grid grid-cols-2 gap-3.5 md:grid-cols-3 lg:grid-cols-6">
           {tags.map((t) => (
-            <StaggerItem key={t.label} className="tag-card">
+            <StaggerItem
+              key={t.label}
+              className="rounded-xl border border-white/[0.07] bg-ink-card px-3 py-[22px] text-center transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-[3px] hover:border-mist/40 hover:shadow-[0_18px_44px_rgba(21,88,201,0.12)] [&_svg]:mb-2.5 [&_svg]:h-[22px] [&_svg]:w-[22px] [&_svg]:text-mist"
+            >
               {t.icon}
-              <p>{t.label}</p>
+              <p className="text-[13px] text-paper">{t.label}</p>
             </StaggerItem>
           ))}
         </StaggerGroup>

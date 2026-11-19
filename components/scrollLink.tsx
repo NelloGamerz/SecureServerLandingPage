@@ -29,8 +29,6 @@ export function ScrollLink({ href, onClick, ...props }: ScrollLinkProps) {
       behavior: "smooth",
       block: "start",
     });
-
-    window.history.replaceState(null, "", hash);
   };
 
   return <Link href={href} onClick={handleClick} {...props} />;

@@ -24,7 +24,7 @@ const ToastViewport = React.forwardRef<
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName;
 
 const toastVariants = cva(
-  "group pointer-events-auto flex items-center gap-2.5 rounded-[11px] border border-brass/40 bg-ink px-[22px] py-3.5 text-[14px] text-paper shadow-[0_20px_50px_rgba(0,0,0,0.5)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-80 data-[swipe=end]:animate-out data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom-2",
+  "group pointer-events-auto flex items-center gap-2.5 rounded-[11px] border border-cobalt/40 bg-ink px-[22px] py-3.5 text-[14px] text-paper shadow-[0_20px_50px_rgba(0,0,0,0.5)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-80 data-[swipe=end]:animate-out data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom-2",
   {
     variants: {
       variant: {
@@ -51,7 +51,7 @@ const Toast = React.forwardRef<
 Toast.displayName = ToastPrimitives.Root.displayName;
 
 const ToastIcon = () => (
-  <Check className="h-[18px] w-[18px] text-brass-light" />
+  <Check className="h-[18px] w-[18px] text-cobalt-light" />
 );
 
 export { ToastProvider, Toast, ToastViewport, ToastIcon };

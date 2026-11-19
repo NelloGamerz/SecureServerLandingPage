@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
+import { Instrument_Serif, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { ScrollProgress } from "@/components/scroll-progress";
+import { Spotlight } from "@/components/spotlight";
 
-const inter = Inter({
+const grotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
+  variable: "--font-grotesk",
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const display = Instrument_Serif({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400"],
   style: ["normal", "italic"],
-  variable: "--font-fraunces",
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -101,10 +103,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} ${plexMono.variable}`}
+      className={`${grotesk.variable} ${display.variable} ${plexMono.variable}`}
     >
       <head>
-        <meta name="theme-color" content="#14120F" />
+        <meta name="theme-color" content="#030407" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -134,7 +136,17 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <ScrollProgress />
+        <Spotlight />
+        <div
+          className="pointer-events-none fixed left-[18px] top-1/2 z-40 -translate-y-1/2 font-mono text-[9.5px] uppercase tracking-[0.42em] text-ash-soft opacity-70 [writing-mode:vertical-rl] max-[1360px]:hidden"
+          aria-hidden
+        >
+          VILSEND · EST. 2026 · SECURE TRANSFER
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
