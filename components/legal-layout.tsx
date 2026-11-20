@@ -2,18 +2,37 @@ import { type ReactNode } from "react";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
+import { JsonLd } from "@/components/json-ld";
+import { SITE_URL } from "@/lib/seo";
 
 export function LegalLayout({
   title,
   lastUpdated,
+  path,
   children,
 }: {
   title: string;
   lastUpdated: string;
+  path: string;
   children: ReactNode;
 }) {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: title,
+        item: `${SITE_URL}${path}`,
+      },
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={breadcrumb} />
       <Nav />
       <main>
         <section className="relative z-[1] pb-20 pt-[60px]">

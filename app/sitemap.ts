@@ -1,25 +1,26 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/seo";
+
+// Bump when page content actually changes — Google trusts lastmod only when it moves.
+const LAST_MODIFIED = new Date("2026-11-20");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://vilsend.app";
-  const lastModified = new Date();
-
   return [
     {
-      url: baseUrl,
-      lastModified,
+      url: SITE_URL,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/privacy`,
-      lastModified,
+      url: `${SITE_URL}/privacy`,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/terms`,
-      lastModified,
+      url: `${SITE_URL}/terms`,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "yearly",
       priority: 0.3,
     },

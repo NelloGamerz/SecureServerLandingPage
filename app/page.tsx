@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { SocialProof } from "@/components/sections/social-proof";
@@ -12,15 +11,6 @@ import { Waitlist } from "@/components/sections/waitlist";
 import { Faq } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/footer";
-
-export const metadata: Metadata = {
-  title: "VilSend — Move files faster. Work together better.",
-  description:
-    "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
-  alternates: {
-    canonical: "/",
-  },
-};
 
 export default function Home() {
   return (

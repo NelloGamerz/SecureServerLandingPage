@@ -1,0 +1,27 @@
+# VilSend
+
+> VilSend is a device-to-device file transfer app for teams. Files move directly between the sender's and receiver's devices, encrypted end to end, with no file size limits. Built for macOS, Windows, iOS, and Android. Currently in early access — join the waitlist.
+
+## Pages
+
+- [Home](https://vilsend.app/): What VilSend is, features, how it works, and the waitlist
+- [Privacy Policy](https://vilsend.app/privacy): How VilSend handles personal and file data
+- [Terms of Service](https://vilsend.app/terms): Terms governing use of VilSend
+
+## Key facts
+
+- Device-to-device transfer: files go from the sending device to the receiving device; nothing is stored in shared cloud folders.
+- End-to-end encryption: files are unreadable to anyone but sender and recipient.
+- No file size limits, and no forced compression.
+- Cross-platform: macOS and Windows at launch, iOS and Android following.
+- Works across different networks — sender and receiver do not need to share a Wi-Fi or office network.
+- Built for teams: organization workspaces, one-link invitations, transfer history, and real-time device status.
+
+## FAQ
+
+- What is VilSend? A platform that lets teams share files directly between their devices, without slow uploads or complex permission trees.
+- Is VilSend secure? Every transfer is encrypted end to end, including from VilSend.
+- Does it work for remote teams? Yes — no dependency on being on the same network.
+- Which platforms are supported? macOS and Windows at launch, then iOS and Android.
+- Who is VilSend built for? Teams that regularly move large or sensitive files: software teams, video editors, agencies, IT departments.
+- How is it different from cloud storage? Cloud storage keeps a copy on a third-party server; VilSend is a transfer tool, not storage.

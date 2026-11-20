@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { LegalLayout } from "@/components/legal-layout";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — VilSend",
+  title: "Terms of Service",
   description:
-    "The terms and conditions governing your use of VilSend's file sharing platform and services.",
+    "The terms and conditions governing your use of VilSend's secure file transfer and device-to-device file sharing platform.",
   alternates: {
     canonical: "/terms",
   },
@@ -12,7 +12,11 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms of Service" lastUpdated="August 1, 2026">
+    <LegalLayout
+      title="Terms of Service"
+      lastUpdated="August 1, 2026"
+      path="/terms"
+    >
       <p style={{ marginBottom: "24px" }}>
         Welcome to VilSend. These Terms of Service govern your use of our file sharing platform
         and related services. By accessing or using VilSend, you agree to be bound by these

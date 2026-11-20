@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { LegalLayout } from "@/components/legal-layout";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — VilSend",
+  title: "Privacy Policy",
   description:
-    "How VilSend collects, uses, and protects your personal information and file data.",
+    "How VilSend collects, uses, and protects your personal information and file data during device-to-device transfers.",
   alternates: {
     canonical: "/privacy",
   },
@@ -12,7 +12,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalLayout title="Privacy Policy" lastUpdated="August 1, 2026">
+    <LegalLayout
+      title="Privacy Policy"
+      lastUpdated="August 1, 2026"
+      path="/privacy"
+    >
       <p style={{ marginBottom: "24px" }}>
         At VilSend, we take your privacy seriously. This Privacy Policy explains how we
         collect, use, store, and protect your information when you use our file sharing platform

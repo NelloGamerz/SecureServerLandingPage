@@ -49,14 +49,15 @@ export function Hero() {
               teams
             </span>
           </div>
-          <h1 className="font-serif text-[clamp(40px,5vw,72px)] font-bold leading-[1.04] tracking-[-0.01em] text-cobalt-light">
+          <h1 className="font-serif text-[clamp(48px,6vw,88px)] font-bold leading-[1.04] tracking-[-0.01em] text-cobalt-light">
             Move files faster.
             <br />
             Work <em className="italic text-lime">better</em> together.
           </h1>
           <p className="my-6 max-w-[480px] text-[18px] leading-[1.65] text-ash">
-            VilSend helps teams securely transfer files across devices with a
-            simple, reliable experience built for modern businesses.
+            VilSend is device-to-device file transfer for teams. Transfer data
+            between Mac, Windows, and mobile devices — end-to-end encrypted,
+            with no file size limits.
           </p>
           <div className="pointer-events-auto mb-9 flex flex-wrap justify-center gap-3.5">
             <Button asChild variant="primary">

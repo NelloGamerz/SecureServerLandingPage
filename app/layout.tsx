@@ -3,6 +3,8 @@ import { Instrument_Serif, Space_Grotesk, IBM_Plex_Mono } from "next/font/google
 import "./globals.css";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { Spotlight } from "@/components/spotlight";
+import { JsonLd } from "@/components/json-ld";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, siteSchemas } from "@/lib/seo";
 
 const grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -26,39 +28,28 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://vilsend.app";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "VilSend — Move files faster. Work together better.",
+    default: SITE_TITLE,
     template: "%s — VilSend",
   },
-  description:
-    "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+  description: SITE_DESCRIPTION,
 
-  // icons: { icon: "/logo.png", apple: "/logo.png" },
   keywords: [
-    "VilSend",
-    "secure file sharing",
-    "encrypted file transfer",
-    "team file sharing",
-    "large file transfer",
-    "device-to-device file sharing",
-    "end-to-end encryption",
-    "cross-platform file sharing",
-    "business file sharing",
-    "secure document transfer",
-    "file sharing for teams",
-    "remote team collaboration",
+    "device to device transfer",
+    "device-to-device file transfer",
+    "transfer data between devices",
+    "share data between devices",
     "secure file transfer",
-    "encrypted sharing",
-    "fast file transfer",
-    "workspace file sharing",
-    "VilSend file sharing",
-    "encrypted file sharing platform",
-    "send files securely",
-    "share files online",
+    "encrypted file transfer",
+    "large file transfer",
+    "file sharing for teams",
+    "send large files",
+    "secure data sharing",
+    "cross-platform file sharing",
+    "end-to-end encryption",
+    "VilSend",
   ],
   authors: [{ name: "VilSend" }],
   creator: "VilSend",
@@ -80,17 +71,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteUrl,
-    siteName: "VilSend",
-    title: "VilSend — Move files faster. Work together better.",
-    description:
-      "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: "VilSend — Move files faster. Work together better.",
-    description:
-      "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
   category: "technology",
 };
@@ -107,34 +96,7 @@ export default function RootLayout({
     >
       <head>
         <meta name="theme-color" content="#030407" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: "VilSend",
-              applicationCategory: "BusinessApplication",
-              operatingSystem: "macOS, Windows, iOS, Android",
-              description:
-                "VilSend helps teams securely transfer files across devices with end-to-end encryption, no file size limits, and a simple, reliable experience built for modern businesses.",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
-              },
-              featureList: [
-                "Device-to-device encrypted transfers",
-                "Organization workspaces",
-                "Team invitations",
-                "Large file support",
-                "Cross-platform experience",
-                "Transfer history",
-                "Real-time device status",
-              ],
-            }),
-          }}
-        />
+        <JsonLd data={siteSchemas} />
       </head>
       <body>
         <ScrollProgress />

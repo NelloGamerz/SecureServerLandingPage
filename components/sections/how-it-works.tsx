@@ -1,6 +1,7 @@
 import { SectionHead } from "@/components/section-head";
 import { StaggerGroup, StaggerItem } from "@/components/stagger";
 import { ArrowRightIcon } from "@/components/icons";
+import { JsonLd } from "@/components/json-ld";
 
 const steps = [
   { num: "STEP 01", title: "Create your workspace", desc: "Set up a home for your team's files in under a minute." },
@@ -9,9 +10,22 @@ const steps = [
   { num: "STEP 04", title: "Start sharing securely", desc: "Drag, drop, done — encrypted from device to device." },
 ];
 
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to transfer files securely between devices with VilSend",
+  step: steps.map((step) => ({
+    "@type": "HowToStep",
+    position: Number(step.num.slice(-2)),
+    name: step.title,
+    text: step.desc,
+  })),
+};
+
 export function HowItWorks() {
   return (
     <section className="relative z-[1] py-[72px] md:py-[100px]" id="how">
+      <JsonLd data={howToJsonLd} />
       <div className="wrap">
         <SectionHead
           eyebrow="How it works"

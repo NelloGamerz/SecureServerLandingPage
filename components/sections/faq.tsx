@@ -13,6 +13,22 @@ const faqs = [
     a: "VilSend is a platform that lets businesses and teams share files directly between their devices, without routing through slow uploads or complex permission trees.",
   },
   {
+    q: "How do I transfer files from one device to another?",
+    a: "Connect both devices to your VilSend workspace, pick the file you want to send, and choose the receiving device. The transfer starts immediately — no upload step, no download link, and no file size limit.",
+  },
+  {
+    q: "What does device-to-device transfer mean?",
+    a: "Instead of uploading a file to a server and sending someone a link, VilSend moves data directly between the sending and receiving devices. Nothing sits in shared storage, and the stream stays encrypted end to end.",
+  },
+  {
+    q: "Can I share data between devices on different networks?",
+    a: "Yes. VilSend does not require the sender and receiver to be on the same Wi-Fi or office network — any two connected devices can transfer, wherever they are.",
+  },
+  {
+    q: "How is VilSend different from cloud storage like Drive or Dropbox?",
+    a: "Cloud storage keeps a copy of your file on someone else's server. VilSend is a transfer tool: files go from your device to the recipient's device, encrypted the whole way, so there is no permanent third-party copy to manage or clean up.",
+  },
+  {
     q: "Is VilSend secure?",
     a: "Every transfer is encrypted end to end, so files are unreadable to anyone but the sender and the intended recipient — including us.",
   },
